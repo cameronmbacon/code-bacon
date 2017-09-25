@@ -3,10 +3,23 @@
   "version": "0.0.1",
   "description": "portfolio back end",
   "main": "index.js",
+  "engines": {
+    "node": "8.5.0",
+    "npm": "5.4.2"
+  },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "author": "Cameron Bacon",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.3",
+    "mocha-lcov-reporter": "^1.3.0"
+  },
+  "dependencies": {}
 }
