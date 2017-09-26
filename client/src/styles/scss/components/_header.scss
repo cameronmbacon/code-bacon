@@ -1,3 +1,13 @@
-nav {
+.header-wrapper {
   background-color: $primary-color;
+}
+
+.left {
+  float: left;
+  clear: right;
+}
+
+.right {
+  float: right;
+  clear: left;
 }

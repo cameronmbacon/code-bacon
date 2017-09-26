@@ -9,7 +9,7 @@ const Blog = () => <h2>Blog Component</h2>;
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <BrowserRouter>
         <div>
           <Header />
