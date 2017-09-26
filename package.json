@@ -11,8 +11,9 @@
     "start": "node index.js",
     "watch": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "sass": "node-sass-chokidar --watch ./client/src/styles/scss > ./client/src/styles/css/index.css",
-    "dev": "concurrently \"npm run watch\" \"npm run sass\" \"npm run client\"",
+    "build-css": "node-sass-chokidar client/src/styles/scss -o client/src/styles/css",
+    "watch-css": "npm run build-css && node-sass-chokidar client/src/styles/scss -o client/src/styles/css --watch --recursive",
+    "dev": "concurrently \"npm run watch\" \"npm run watch-css\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
@@ -31,6 +32,7 @@
   "dependencies": {
     "concurrently": "^3.5.0",
     "express": "^4.15.4",
+    "font-awesome": "^4.7.0",
     "mongoose": "^4.11.12",
     "node-sass-chokidar": "0.0.3"
   }
