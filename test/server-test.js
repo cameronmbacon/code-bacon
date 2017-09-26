@@ -4,7 +4,8 @@ const request = require('superagent');
 const serverCtrl = require('./lib/server-ctrl');
 const server = require('../index');
 
-const url = 'http://localhost:5000';
+const PORT = process.env.PORT || 5000;
+const url = `http://localhost:${PORT}`;
 
 describe('Server test', function() {
   before(done => serverCtrl.serverUp(server, done));
@@ -23,7 +24,7 @@ describe('Server test', function() {
 
     it('should respond with a body', done => {
       request
-        .get(url)
+        .get(`${url}/epic`)
         .send({})
         .end((err, res) => {
           if (err) return done(err);
