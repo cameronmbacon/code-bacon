@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/epic', (req, res) => {
   res.send({
     epic: 'BACON STRIPS N BACON STRIPS N BACON STRIPS!'
   });

@@ -9,10 +9,10 @@ const url = 'http://localhost:5000';
 describe('Server test', function() {
   before(done => serverCtrl.serverUp(server, done));
   after(done => serverCtrl.serverDown(server, done));
-  describe('#GET /', function() {
+  describe('#GET /epic', function() {
     it('should respond with status 200', done => {
       request
-        .get(url)
+        .get(`${url}/epic`)
         .send({})
         .end((err, res) => {
           if (err) return done(err);
