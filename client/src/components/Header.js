@@ -1,40 +1,39 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import NavList from './NavList';
+import logo from '../assets/code-bacon.png';
 
 class Header extends Component {
 	constructor(props) {
 		super(props);
-		this.handleMouseEnter = this.handleMouseEnter.bind(this);
-		this.handleMouseLeave = this.handleMouseLeave.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 		this.state = { showNav: false };
 	}
 	render() {
-		console.log(this.state.showNav);
-		return (
+		return this.state.showNav ? (
 			<div className="header-wrapper">
-				<Link className="left" to={'/'}>
-					code bacon
+				<Link className="left logo-wrapper" to={'/'}>
+					<img className="logo" src={logo} alt="code-bacon logo" />
 				</Link>
-				<div
-					className="right"
-					onMouseEnter={this.handleMouseEnter}
-					onMouseLeave={this.handleMouseLeave}
-				>
-					<Nav showNav={this.state.showNav} />
+				<div className="right header-nav" onClick={this.handleClick}>
+					<Nav />
+				</div>
+				<NavList showNav={this.state.showNav} />
+			</div>
+		) : (
+			<div className="header-wrapper">
+				<Link className="left logo-wrapper" to={'/'}>
+					<img className="logo" src={logo} alt="code-bacon logo" />
+				</Link>
+				<div className="right header-nav" onClick={this.handleClick}>
+					<Nav />
 				</div>
 			</div>
 		);
 	}
 
-	handleMouseEnter(e) {
-		e.preventDefault();
-		this.setState({
-			showNav: !this.state.showNav
-		});
-	}
-
-	handleMouseLeave(e) {
+	handleClick(e) {
 		e.preventDefault();
 		this.setState({
 			showNav: !this.state.showNav

@@ -1,15 +1,9 @@
 import React from 'react';
-import NavList from './NavList';
 
-function Nav(props) {
-	return props.showNav ? (
+function Nav() {
+	return (
 		<div className="nav-wrapper">
-			<i className="fa fa-bars right" />
-			<NavList />
-		</div>
-	) : (
-		<div className="nav-wrapper">
-			<i className="fa fa-bars right" />
+			<i className="fa fa-bars right navicon" />
 		</div>
 	);
 }

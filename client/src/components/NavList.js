@@ -6,19 +6,29 @@ function NavList() {
 		<div className="nav-list-wrapper">
 			<ul className="nav-list">
 				<li className="nav-list-item">
-					<Link to={'/'}>Home</Link>
+					<Link className="nav-link" to={'/'}>
+						Home
+					</Link>
 				</li>
 				<li className="nav-list-item">
-					<Link to={'/about'}>About</Link>
+					<Link className="nav-link" to={'/about'}>
+						About
+					</Link>
 				</li>
 				<li className="nav-list-item">
-					<Link to={'/work'}>Work</Link>
+					<Link className="nav-link" to={'/work'}>
+						Work
+					</Link>
 				</li>
 				<li className="nav-list-item">
-					<Link to={'/contact'}>Blog</Link>
+					<Link className="nav-link" to={'/contact'}>
+						Blog
+					</Link>
 				</li>
 				<li className="nav-list-item">
-					<Link to={'/contact'}>Contact</Link>
+					<Link className="nav-link" to={'/contact'}>
+						Contact
+					</Link>
 				</li>
 			</ul>
 		</div>

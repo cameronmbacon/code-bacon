@@ -2,7 +2,24 @@
 	list-style-type: none;
 }
 
+.nav-list {
+	width: 100%;
+	padding-left: 0;
+	clear: both;
+}
+
 .nav-list-item {
+	font-size: 2rem;
 	display: block;
+	text-align: center;
 	text-decoration: none;
+}
+
+.nav-link {
+	text-decoration: none;
+}
+
+.navicon {
+	@extend %clearfix;
+	font-size: 3rem;
 }

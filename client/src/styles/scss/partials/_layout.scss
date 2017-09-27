@@ -1,0 +1,19 @@
+.headshot {
+	@extend %clearfix;
+	max-width: $headshot-width;
+}
+
+.logo {
+	@extend %clearfix;
+	width: $logo-width;
+}
+
+.left {
+	float: left;
+	clear: right;
+}
+
+.right {
+	float: right;
+	clear: left;
+}

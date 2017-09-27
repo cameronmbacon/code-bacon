@@ -1,13 +1,16 @@
 .header-wrapper {
-  background-color: $primary-color;
+	@extend %clearfix;
+	background-color: $primary-color;
+	border-bottom: 2px solid #f00;
 }
 
-.left {
-  float: left;
-  clear: right;
+.header-nav {
+	display: inline-block;
+	clear: none;
 }
 
-.right {
-  float: right;
-  clear: left;
+.logo-wrapper {
+	background-color: #fff;
+	display: inline-block;
+	max-width: 12%;
 }

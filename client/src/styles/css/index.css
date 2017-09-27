@@ -1,9 +1,14 @@
 @import url(../../../node_modules/font-awesome/css/font-awesome.min.css);
-container {
-  height: 100%; }
+.headshot:after, .logo:after, .header-wrapper:after, .navicon:after {
+  content: '';
+  display: table;
+  clear: both; }
 
-.header-wrapper {
-  background-color: #0ff; }
+.headshot {
+  max-width: 80%; }
+
+.logo {
+  width: 100%; }
 
 .left {
   float: left;
@@ -13,9 +18,38 @@ container {
   float: right;
   clear: left; }
 
+container {
+  height: 100%; }
+
+.header-wrapper {
+  background-color: #262626;
+  border-bottom: 2px solid #f00; }
+
+.header-nav {
+  display: inline-block;
+  clear: none; }
+
+.logo-wrapper {
+  background-color: #fff;
+  display: inline-block;
+  max-width: 12%; }
+
 .nav-list-wrapper {
   list-style-type: none; }
 
+.nav-list {
+  width: 100%;
+  padding-left: 0;
+  clear: both; }
+
 .nav-list-item {
+  font-size: 2rem;
   display: block;
+  text-align: center;
   text-decoration: none; }
+
+.nav-link {
+  text-decoration: none; }
+
+.navicon {
+  font-size: 3rem; }
