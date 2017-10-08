@@ -5,7 +5,11 @@
   clear: both; }
 
 .headshot {
-  max-width: 80%; }
+  background-color: #042;
+  width: 46%;
+  height: 46%;
+  margin-right: 2%;
+  border-radius: 100%; }
 
 .logo {
   width: 100%; }
@@ -18,7 +22,17 @@
   float: right;
   clear: left; }
 
-container {
+.main-heading {
+  font-size: 3em;
+  margin: auto; }
+
+.sub-heading {
+  width: 46%;
+  display: inline-block;
+  margin-left: 2%;
+  font-size: 2.5em; }
+
+.container {
   height: 100%; }
 
 .header-wrapper {

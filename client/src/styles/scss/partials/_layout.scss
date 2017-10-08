@@ -1,6 +1,10 @@
 .headshot {
 	@extend %clearfix;
-	max-width: $headshot-width;
+	background-color: #042;
+	width: $headshot-width;
+	height: $headshot-width;
+	margin-right: 2%;
+	border-radius: 100%;
 }
 
 .logo {
@@ -16,4 +20,16 @@
 .right {
 	float: right;
 	clear: left;
+}
+
+.main-heading {
+	font-size: 3em;
+	margin: auto;
+}
+
+.sub-heading {
+	width: $headshot-width;
+	display: inline-block;
+	margin-left: 2%;
+	font-size: 2.5em;
 }
